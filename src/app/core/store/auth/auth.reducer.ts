@@ -1,16 +1,16 @@
-import { User } from './../../../shared/models/user.model';
+import { UserInterface } from './../../../shared/models/user.model';
 import { Action } from '@ngrx/store';
 import * as AuthActions from './auth.action';
 import { AuthService } from './../../services/auth.service';
 
-const INITIAL_STATE: User = {
+const INITIAL_STATE: UserInterface = {
     id: null,
     email: null,
     is_authenticated: false
 }
 
 
-export function authReducer(state: User = INITIAL_STATE, action: any) {
+export function authReducer(state: UserInterface = INITIAL_STATE, action: any) {
    switch(action.type) {
     case AuthActions.AUTH_TYPES.LOGIN:
         console.log('login', action.payload);

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core'
 import { Observable, Subscription } from 'rxjs';
 import { Store } from '@ngrx/store'
 import { AppState } from './../../core/store/AppState';
-import { User } from './../../shared/models/user.model';
+import { UserInterface } from './../../shared/models/user.model';
 import * as AuthActions from './../../core/store/auth/auth.action'
  
 import { Router } from '@angular/router';
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   authUser: any;
   authUser$: Subscription
 
-  users$: Observable<User[]>;
+  users$: Observable<UserInterface[]>;
   isSubmited: boolean;
   formData: FormGroup;
   formData$: Subscription;

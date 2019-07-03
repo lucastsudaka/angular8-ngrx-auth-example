@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 
 import { Observable, of } from 'rxjs';
 import { retry, concatMap, map, mergeMap, catchError, switchMap, tap, flatMap, find } from "rxjs/operators"
-import { User } from './../../shared/models/user.model'
+import { UserInterface } from './../../shared/models/user.model'
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, PLATFORM_ID } from '@angular/core';
 import { GlobalService } from '../global.service';
@@ -85,12 +85,12 @@ export class AuthService {
   authLogin({email, password, token}): Observable<any> {
     const url = `${this._globalService.env.API_URL}/api/users/login`;
     console.log(email, password)
-    return this.http.post<User>(url, { email, password });
+    return this.http.post<UserInterface>(url, { email, password });
   }
 
-  authRegister(email: string, password: string): Observable<User> {
+  authRegister(email: string, password: string): Observable<UserInterface> {
     const url = `${this._globalService.env.API_URL}/api/register`;
-    return this.http.post<User>(url, { email, password });
+    return this.http.post<UserInterface>(url, { email, password });
   }
 
 

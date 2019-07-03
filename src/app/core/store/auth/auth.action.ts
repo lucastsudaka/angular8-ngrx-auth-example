@@ -1,7 +1,7 @@
 // Section 1 Imports
 import { Injectable } from '@angular/core'
 import { Action } from '@ngrx/store'
-import { User, LoadUser } from './../../../shared/models/user.model';
+import { UserInterface, LoadUser } from './../../../shared/models/user.model';
 
 // Section 2 Actions types
 export const enum AUTH_TYPES {

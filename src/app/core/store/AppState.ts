@@ -1,4 +1,4 @@
-import { User } from './../../shared/models/user.model';
+import { UserInterface } from './../../shared/models/user.model';
 
 //reducers
 import { authReducer } from './auth/auth.reducer'
@@ -7,7 +7,7 @@ import { authReducer } from './auth/auth.reducer'
 import { AuthEffects } from './auth/auth.effects';
 
 export interface AppState {
-    readonly authUser: User;
+    readonly authUser: UserInterface;
 }
 
 export const AppReducers = {

@@ -1,4 +1,4 @@
-import { User } from './../../../shared/models/user.model';
+import { UserInterface } from './../../../shared/models/user.model';
 import { Injectable } from '@angular/core';
 
 import { Actions, Effect, ofType } from '@ngrx/effects'
@@ -8,7 +8,6 @@ import { Observable, of } from 'rxjs';
 import { map, mergeMap, catchError, switchMap, tap, flatMap } from "rxjs/operators"
 
 import * as authActions from './auth.action'
-import { UsersService } from './../../services/users.service';
 import { AuthService } from './../../services/auth.service';
 
 
@@ -16,7 +15,6 @@ import { AuthService } from './../../services/auth.service';
 export class AuthEffects {
     constructor(
         private _actions$: Actions,
-        private _usersService: UsersService,
         private _AuthService: AuthService
     ) { }
     

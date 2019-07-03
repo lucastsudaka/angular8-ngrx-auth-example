@@ -1,4 +1,4 @@
-export interface User {
+export interface UserInterface {
     id?: number | null;
     email?: string | null;
     password?: string | null;
@@ -12,5 +12,5 @@ export interface User {
 
 export interface LoadUser {
     loading: boolean;
-    data: User | User[] | null
+    data: UserInterface | null
 }
