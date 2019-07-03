@@ -11,6 +11,6 @@ https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de6
 
 # Instalação 
 
-$ npm install -g @angular/cli
-$ npm install
-$ ng serve
+$ npm install -g @angular/cli  
+$ npm install  
+$ ng serve  
