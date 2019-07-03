@@ -1,0 +1,73 @@
+
+
+
+<div class="login-wrapper">
+  <form  (ngSubmit)="onSubmit()" [formGroup]="formData" class="login">
+      <section class="title">
+          <div *ngIf="authUser?.is_authenticated">
+              OI
+                </div>
+          <h3 class="welcome">Auth</h3>
+                Exemplo
+          <h5 class="hint">Login</h5>
+      </section>
+      <div class="login-group">
+          <clr-input-container>
+            <input type="text" formControlName="email" clrInput   autocomplete="off" matInput placeholder="Email">
+          </clr-input-container>
+          <clr-password-container>
+            <input   type="password" formControlName="password" clrPassword    autocomplete="off" matInput placeholder="Senha">
+          </clr-password-container>
+
+          <div *ngIf="false" class="error active">
+              Invalid user name or password
+          </div>
+          <button type="submit" class="btn btn-primary">NEXT</button>
+          
+      </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="false" class="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="formData">
+    <div>
+      <clr-input-container>
+        <input type="text" formControlName="email"  autocomplete="off" matInput placeholder="Email">
+        <div *ngIf="!formData.controls['email'].valid && formData.controls['email'].touched">
+          <span *ngIf="formData.controls['email'].errors?.email">
+             Error: Invalid email
+          </span> 
+        </div>
+      </clr-input-container>
+    </div>
+    <div>  
+      <div>
+        <input   type="password" formControlName="password"  autocomplete="off" matInput placeholder="Senha">
+        <div *ngIf  ="!formData.controls['password'].valid && formData.controls['password'].touched">
+          <span  *ngIf="formData.controls['password'].errors?.minlength">
+             Error: Password min length 5
+          </span> 
+        </div>
+      </div>
+    </div>
+    <button type="submit" mat-flat-button color="primary">Entrar</button>
+
+  </form>
+</div>
