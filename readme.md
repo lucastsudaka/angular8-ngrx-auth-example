@@ -1,5 +1,5 @@
 Exemplo de sistema de autenticação utilizando Angular 8 e NGRX.  
-O NGRX utiliza um esquema semelhante ao Redux com adição do RxJS.
+O NGRX utiliza um esquema semelhante ao Redux do React, porém com a adição do RxJS.
   
 Angular 8: https://angular.io/guide/universal  
 NGRX: https://ngrx.io/  
