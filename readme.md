@@ -1,15 +1,15 @@
-Exemplo de sistema de autenticação utilizando Angular 8 e NGRX.  
-O NGRX utiliza um esquema semelhante ao Redux do React, porém com a adição do RxJS.
+Example of an authentication system using Angular 8 and NGRX.
+NGRX uses a similar scheme to React's Redux, but with the addition of RxJS.
   
 Angular 8: https://angular.io/guide/universal  
 NGRX: https://ngrx.io/  
 
-A estrutura de diretórios foi fortemente baseada no 
+The directory structure was heavily based on
 https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7  
 
 ![](https://i.imgur.com/tRFy2L5.png)
 
-# Instalação 
+# Install 
 
 $ npm install -g @angular/cli  
 $ npm install  
